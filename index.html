@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
-   <link rel="stylesheet" href="estilos/estilos.css">
-   <link rel="stylesheet" href="estilos/main.css">
-   <link rel="stylesheet" href="estilos/vendor.css">
-   <!--JavaScript
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/vendor.css">
+    <link rel="stylesheet" href="estilos/font-awesome/css/fontawesome-all.css">
+
+    <!--JavaScript
    ===================================-->
-   <script src="js/modernizr.js"></script>
-   <script src="js/pace.main.js"></script>
-   <!--Favicon- icono de la pestaña
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.main.js"></script>
+    <!--Favicon- icono de la pestaña
    ====================================-->
 
-   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <title>Portafolio</title>
 </head>
 
 <body id="top">
     <!-- vista de carga o loading-->
-     <div id="preloader">
+    <div id="preloader">
         <div id="loader"></div>
-     </div>
-     <!-- Empezamos con el header-->
-      <header class="s-header">
+    </div>
+    <!-- Empezamos con el header-->
+    <header class="s-header">
         <div class="header-logo">
             <a href="index.html" class="site-log">
                 <img src="img/logo.svg" alt="Homepage" class="">
@@ -36,7 +39,7 @@
         =============================-->
         <nav class="header-nav-wrap">
             <ul class="header-main-nav">
-                <li class="current"><a href="#intro" class="smoothscroll"  title="intro">Introduccion</a></li>
+                <li class="current"><a href="#intro" class="smoothscroll" title="intro">Introduccion</a></li>
                 <li><a href="#about" title="about" class="smoothcroll">About</a></li>
                 <li><a href="#serveces" title="services" class="smoothscroll"> services</a></li>
                 <li><a href="#works" title="Works" class="smothscroll">Works</a></li>
@@ -44,37 +47,324 @@
             </ul>
             <!-- Creamos una lista desordenada para las redes sociales 
              ==============================================-->
-             <ul class="header-social"></ul>
-             <li><a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-             <li><a href="#1"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-             <li><a href="#2"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-             <li><a href="#3"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
-             <li><a href="#4"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+            <ul class="header-social"></ul>
+            <li><a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#1"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#2"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#4"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
         </nav>
         <a href="#" class=" header-menu-togle"> <span>menu</Menu></span></a>
 
-      </header> <!-- Fin del header -->
+    </header> <!-- Fin del header -->
 
-      <!--Introduccion
+    <!--Introduccion
       ==================================-->
-      <Section id="intro" class="s-into target-section" >
+    <Section id="intro" class="s-into target-section">
         <div class="row intro-content">
-            <div class="column large-9 mob-full  intro-text" >
+            <div class="column large-9 mob-full  intro-text">
 
                 <h3>Hola, Mi Nombre es Christopher Rodriguez</h3>
-            <h1>
-                Desarrollador web <br>
-                Desarrolldores mobiles <br>
-                Expertos en IA <br>
-            </h1>
+                <h1>
+                    Desarrollador web <br>
+                    Desarrolldores mobiles <br>
+                    Expertos en IA <br>
+                </h1>
             </div>
             <div class="intro scroll">
                 <a href="#about" class="intro-scroll-link smoothcroll">Presione para mas </a>
-                
+
+            </div>
+            <div class="intro-grid"></div>
+            <div class="intro-pic"></div>
+        </div> <!--end row-->
+    </section><!--end intro-->
+
+    <!--about
+      ================================================-->
+    <section id="about" class="s-about target-section">
+        <div class="about-me">
+            <div class="column large-full">
+                <h2 class="section-heading">About me</h2>
             </div>
         </div>
-      </section>
+        <div class="row about-me__content"> <!-- cbezera-->
+            <div class="column large-full about-me__text"> <!-- cuerpo-->
+                <p class="lead"> <!--Creacion de parrafos-->
+                    Yo,Christopher Rodriguez apasionada por la computación, lo que refleja tu interés en la tecnología y
+                    el aprendizaje continuo.
+                    En tu tiempo libre, disfruto jugar voleibol, y practicar algunos deportes .
+                    soy una persona facil de tratar y se lleva con todos los que m,e rodean .
+                </p>
+                otro parrafo
+                <p>
+                <p>
+                    como estas
+                </p>
+                <p>
+                    solo liga
+                </p>
+                </p>
 
-    
+            </div>
+        </div>
+        <div class="row about-me__ buttons">
+            <div class="colum large-half tab-full">
+                <a href="#" class="btn btn--stroke full-width">Hire me</a>
+            </div>
+            <div class="colum large-half tab-full">
+                <a href="#" class="btn btn--primary full-width"> Dowload CV</a>
+            </div>
+        </div>
+        </div> <!-- End about me -->
+
+        <!-- Contenedor principal de la sección de experiencia y educación 
+             ==============================================-->
+        <div class="about-experience">
+            <div class="row heading-block"> <!-- Fila para el título de la sección -->
+                <div class="column large-full">
+                    <h2 class="section-heading"> Work & Education</h2>
+                </div>
+            </div>
+            <!-- Fila para la línea de tiempo -->
+            <div class="row about-experience__timeline">
+                <div class="column large-half tab-full">
+                    <div class="timeline">
+                        <div class="timeline_icon-wrap"> <!-- Contenedor para el ícono  -->
+                            <span class="timeline_icon timeline_icon-work"></span>
+                        </div>
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header"> <!-- Encabezado que contiene los detalles  -->
+                                <p class="timeline__timeframe">Abril 2024 - Present</p>
+                                <h3 class="item-title">Instituto Tecnológico Quito</h3>
+                                <h5>Estudiante</h5>
+                            </div>
+                        </div>
+                        <!--Contenedor para decripccion -->
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat nemo non
+                                laudantium optio
+                                corrupti nulla, tenetur placeat dolores inventore explicabo veniam ratione iure sit.
+                                Consectetur, quae quasi! Veniam, earum.</p>
+                        </div>
+                    </div>
+
+                    <!--Contenedor de la línea de tiempo-->
+                    <div class="timeline__block">
+                        <div class="timeline__bullet">
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">Noviembre 2022 - Enero 2023</p>
+                                <h3 class="item-title">Instituto Nacional de Estadística y Censos</h3>
+                                <h5>Cencista</h5>
+                            </div>
+
+                            <!--Contenedor para decripccion -->
+                            <div class="timeline__desc">
+                                <p>Los censistas son los responsables de recoger usando sus cuestionarios censales y
+                                    Hojas de Resumen
+                                    C2- los datos de todas las Viviendas, Hogares y Personas que encuentren
+                                    al interior de las áreas de trabajo que se les asigne.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--Contenedor de la línea de tiempo-->
+                    </div>
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">March 2016 - June 2017</p>
+                            <h3 class="item-title">Epic Design Studio</h3>
+                            <h5>Frontend Developer</h5>
+                        </div>
+                        <!--Contenedor para decripccion -->
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
+                                cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
+                                cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
+                                occaecat nisi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna que ocupa la mitad del ancho en dispositivos grandes y todo el ancho en dispositivos más pequeños -->
+            <div class="column large-half tab-full">
+                <div class="timeline"> <!--Contenedor de la línea de tiempo-->
+                    <div class="timeline__icon-wrap">
+                        <span class="timeline__icon timeline_icon--education"></span>
+                    </div>
+                    <div class="timeline__block"> </div>
+                    <div class="timeline__bullet">
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Septiembre 2008 - Junio 2015 </p>
+                            <h3 class="item-title">
+                                Unidad Educativa Eugenio Espejo
+                            </h3>
+                            <h5>Escuela</h5>
+                        </div>
+
+                        <!--Contenedor para decripccion -->
+                        <div class="timeline__desc">
+                            <p>participar en diversas actividades educativas y sociales.
+                                Principalmente, asistir a clases donde aprenden materias como matemáticas, , lengua, y
+                                arte.
+                                Además, realizan actividades prácticas, trabajos en grupo</p>
+                        </div>
+                    </div>
+
+                    <!--Contenedor de la línea de tiempo-->
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline_header">
+                            <p class="timeline__timeframe">Septiembre 20015 - Junio 2021</p>
+                            <h3 class="item-title">Unidad Educativa Eugenio Espejo</h3>
+                            <h5>Colegio-bachillerato</h5>
+                        </div>
+
+                        <!--Contenedor para decripccion -->
+                        <div class="timeline__desc">
+                            <p> Principalmente, asistir a clases donde aprenden materias como matemáticas, ciencias,
+                                lengua, historia, Biologia, Quimica y arte.
+                                Además, realizan actividades prácticas, trabajos en grupo y asi logre gradurme de
+                                bachiller en ciencias</p>
+                        </div>
+                    </div>
+
+                    <!--Contenedor de la línea de tiempo-->
+                    <di class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline_header">
+                            <p class="timeline__header">Abril 2024 - Present</p>
+                            <h3 class="item-title">Instituto Tecnologico Quito</h3>
+                            <h5>Tercer nivel</h5>
+                        </div>
+
+                        <!--Contenedor para decripccion -->
+                        <div class="timeline__desc">
+                            <p>Acutalmente estoy cursando una tecnologia de tercer nivel en la carrera de Desarrollo de
+                                Software</p>
+                        </div>
+                    </di>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div><!--end about experience-->
+
+    </section><!-- end s-about-->
+
+    <!--Services
+========================================================================================================    -->
+
+
+    <!-- Sección principal para los servicios ofrecidos, con un identificador para facilitar el acceso -->
+    <section id="services" class="s-services ss-dark target-section">
+        <div class="shadow-overlay"></div>
+        <div class="row heading-block heading*block--center"> <!-- Encabezado de servicios -->
+            <div class="column large-full"> <!-- Columna que ocupa todo el ancho de la fila -->
+                <h2 class="section-heading section-heading--centerbottom">Capabilities/ Habilidades</h2>
+                <p class="section-desc">
+                    My passion and goal is to help you make your business standout.
+                </p>
+            </div>
+        </div><!--end heading-block-->
+
+        <!-- Lista de servicios -->
+        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+            <div class="column item-service">   <!-- Servicio 1 -->
+                <div class="item-service__content">
+                    <h4 class="item-title">CISCO --JavaScript Essentials</h4>
+                    
+                      <!-- Párrafo que describe el servicio en detalle -->
+                    <p>
+                        Este curso abarca desde los conceptos básicos, como variables, tipos de datos y estructuras de
+                        control, hasta temas más complejos como
+                        funciones, objetos y programación orientada a objetos.
+                        Los estudiantes aprenderán a manipular el DOM (Document Object Model) para crear interactividad
+                        en páginas web,
+                        Además, se incluirán prácticas y proyectos que permitirán aplicar lo aprendido en situaciones
+                        reales,
+                        desarrollando aplicaciones web dinámicas.
+                        Al finalizar el curso, los participantes tendrán una sólida comprensión de JavaScript y estarán
+                        preparados
+                        para continuar su aprendizaje en frameworks y bibliotecas como React o Node.js.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="column item-service">   <!-- Servicio 2 -->
+                <div class="item-services__content">
+                    <h4 class="item-title">Curso licencia profecional tipo E</h4>
+                      <!-- Párrafo que describe el servicio en detalle -->
+                    <p>
+                        En este curso, aprendo sobre las leyes de tránsito, la seguridad vial y cómo mantener
+                        adecuadamente un vehículo. También tengo la oportunidad de practicar la conducción de camiones y
+                        autobuses. Al finalizar, tendré que aprobar un examen teórico y práctico para conseguir mi
+                        licencia. Estoy emocionado por adquirir estas habilidades y poder conducir de manera segura y
+                        responsable."
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up"> <!-- Servicio 3 -->
+                <div class="item-service__content">
+                    <h4 class="item-title">desktop applications</h4>
+                      <!-- Párrafo que describe el servicio en detalle -->
+                    <p>
+                        Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
+                        a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
+                        asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                    </p>
+                </div>
+            </div>
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">computer security</h4>
+                      <!-- Párrafo que describe el servicio en detalle -->
+                    <p>
+                        Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
+                        a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
+                        asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">UI/UX Design</h4>
+
+                      <!-- Párrafo que describe el servicio en detalle -->
+                    <p>
+                        Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
+                        a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
+                        asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Artificial intelligence</h4>
+
+                      <!-- Párrafo que describe el servicio en detalle -->
+                    <p>
+                        Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
+                        a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
+                        asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                    </p>
+                </div>
+            </div><!-- end services-list-->
+        </div><!--en s-services-->
+
+    </section>
+
+
+
 </body>
+
 </html>
