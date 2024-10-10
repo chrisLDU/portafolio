@@ -1,0 +1,59 @@
+html{
+    font-size: 16px;
+}
+
+/*voy a usar mediasquery para hacerle adaptable la letra a un dispositivo diferente*/
+@media screen and(max-width:400px) {
+   html{
+    font-size: 9,4117647051825353;
+   } 
+}
+
+html,body{
+    height: 100%;
+}
+body{
+    background-color: white;
+    font-family: "Lato"; 
+    font-size: 1,7rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.882;
+    color: black;
+    margin: 0; /*margen exteriorr*/
+    padding: 12px; /*margen interior*/
+}
+
+/*estilos a los links*/
+a{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active{
+    color: #000;
+}
+
+a:hover,
+a:active{
+    outline: 0;
+}
+
+/*Tipografia */
+h1,h2,h3,h4,h5.,h6, .h1,.h2,.h3,.h4,.h5,.h5,.h6{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+   color: #ffff; 
+}
+
+@media screen and(max-width) {
+    
+}
+
+h1, .h2, .h3, .h4, .h5 
+
+
+
