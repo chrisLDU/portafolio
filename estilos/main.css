@@ -1,59 +1,168 @@
-html{
+html {
     font-size: 16px;
 }
 
-/*voy a usar mediasquery para hacerle adaptable la letra a un dispositivo diferente*/
-@media screen and(max-width:400px) {
-   html{
-    font-size: 9,4117647051825353;
-   } 
+/Voy a usar mediasquery para hacer adaptable la letra a un dispositivo diferete/
+@media screen and (max-width:400PX) {
+    html {
+        font-size: 9.411764705882353px;
+    }
 }
 
-html,body{
-    height: 100%;
+html,
+body {
+    height: 100%
 }
-body{
-    background-color: white;
-    font-family: "Lato"; 
-    font-size: 1,7rem;
+
+body {
+    background: #fadbd8;
+    font-family: "Lato";
+    font-size: 1.7rem;
+    /* esta etiquea toma el tamano padre(font-size de 16px) y lo va a multiplicar por 1.7*/
     font-style: normal;
+    /**/
     font-weight: 800;
+    /*grosor de la letra */
     line-height: 1.882;
+    /muestra el interlieneado/
     color: black;
-    margin: 0; /*margen exteriorr*/
-    padding: 12px; /*margen interior*/
+    /*color */
+    margin: 0;
+    /* margen exterior */
+    padding: 12px;
+    /*margen interior  */
 }
 
-/*estilos a los links*/
-a{
-    color: red;
+/estilos a los links/
+
+a {
+    color: #cf1767;
     transition: all 0.3s ease-in-out;
 }
 
 a:hover,
+/* cunado soloca el mouse coloca el color */
 a:focus,
-a:active{
+/* da como un brillo que no se nota tanto */
+a:active {
+    /*da el color */
     color: #000;
 }
 
 a:hover,
-a:active{
+a:active {
     outline: 0;
 }
 
-/*Tipografia */
-h1,h2,h3,h4,h5.,h6, .h1,.h2,.h3,.h4,.h5,.h5,.h6{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/tipografia/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Frank Ruh1 libre", serif; 
     font-weight: 500;
     font-style: normal;
-   color: #ffff; 
+    color: #fff;
 }
 
-@media screen and(max-width) {
-    
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    margin-top: 6rem;
+    /*margen hacia arriba */
+    margin-bottom: 16rem;
+    /margen hacia abajo/
 }
 
-h1, .h2, .h3, .h4, .h5 
+@media screen and (max-width:600px) {
 
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4 {
+        margin-top: 6rem;
+        /*margen hacia arriba */
 
+    }
+}
 
+h5,.h5,.h6,.h6{
+    margin-top: 4.8rem;
+    margin-bottom: 1.2rem;
+}
+/*estilos del header*/
+.s-header{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    border: 1px solid black;
+    height: 78px;
+    text-align: center;
+}
+.s-header.sticky{
+    background-color: #050505;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-logo{
+    display: inline-block;
+    margin: 6px 0 0 0;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+}
+
+.header-logo a{
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    transition: all .3s;
+}
+
+.header-logo img {
+    width: 132px;
+    height: 36px;
+    margin: 0;
+}
+
+.header-nav-wrap{
+    display: inline-block;
+}
+
+.header-nav-wrap ul{
+    display: inline-block;
+    list-style: none;
+    margin-left: 0;
+    margin-top: 18px;
+}
+
+.header-nav-wrap li{
+    display: inline-block;
+    padding-left: 0;
+}
+.header-nav-wrap li a{
+    display: block;
+    line-height: calc(78px-(18px*2x));
+}
