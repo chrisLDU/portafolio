@@ -15,7 +15,7 @@ body {
 }
 
 body {
-    background: #fadbd8;
+    background: blueviolet;
     font-family: "Lato";
     font-size: 1.7rem;
     /* esta etiquea toma el tamano padre(font-size de 16px) y lo va a multiplicar por 1.7*/
@@ -165,4 +165,55 @@ h5,.h5,.h6,.h6{
 .header-nav-wrap li a{
     display: block;
     line-height: calc(78px-(18px*2x));
+}
+
+.header-main-nav{
+    font-family: sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 0 0 4px;
+    z-index: 2;
+    position: static;
+}
+
+.header-main-nav li{
+    margin: 0 2rem;
+}
+
+.header-main-nav a{
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.header-main-nav a:hover,
+.header-main-nav a:focus,
+.header-main-nav a:active{
+    color: #ffffff;
+}
+
+.header-main-nav .current a{
+    color: #ffffff;
+}
+
+.header-social{
+    font-size: 2rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 40px;
+
+}
+
+.header-social li{
+    margin-right: 1rem;
+}
+
+.header-social li:last-child{
+    margin-right: 0;
+}
+
+.header-social li a{
+    color: rgb(255, 255, 255,0.9);
 }
