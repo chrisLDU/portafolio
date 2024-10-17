@@ -188,32 +188,821 @@ h5,.h5,.h6,.h6{
 }
 
 .header-main-nav a:hover,
-.header-main-nav a:focus,
+.header-main-nav a:focus,   /*Llamamos a las clases asignadas*/ 
 .header-main-nav a:active{
     color: #ffffff;
 }
 
-.header-main-nav .current a{
+.header-main-nav .current a{   /*Llamamos a las clases asignadas*/ 
     color: #ffffff;
 }
 
-.header-social{
+.header-social{       /*Llamamos a las clases asignadas*/ 
     font-size: 2rem;
     margin: 0;
-    position: absolute;
+    position: absolute; /* Damos una posicion absoluta*/
     top: 0;
     right: 40px;
 
 }
 
-.header-social li{
+.header-social li{   /*Llamamos a las clases asignadas*/ 
     margin-right: 1rem;
 }
 
-.header-social li:last-child{
+.header-social li:last-child{    /*Llamamos a las clases asignadas*/ 
     margin-right: 0;
 }
 
-.header-social li a{
-    color: rgb(255, 255, 255,0.9);
+.header-social li a{    /*Llamamos a las clases asignadas*/ 
+    color: rgb(255, 255, 255,0.9); /*Color*/
+}
+
+/*----------------------------------------------------------------------------------------
+* # menu trigger
+*-----------------------------------------------------------------------------------------*/
+.header-menu-toggle {   /*Llamamos a las clases asignadas*/ 
+    display: none;    /* Oculta el elemento en la página. */ 
+    height: 42px;    /* Establece la altura */
+    width: 42px;   /* Establece el ancho */
+    line-height: 42px;         /* Establece la altura , para centrar el texto verticalmente. */ 
+    font-family: "Lora", serif;    /* Define la fuente del texto */
+    font-size: 1.4rem;
+    text-transform: uppercase;    /* Convierte todo el texto a mayúsculas. */ 
+    letter-spacing: .2rem;     /* Aumenta el espacio entre las letras */
+    color: rgba(255, 255, 255, 0.5);    /* Establece el color del texto en blanco */ 
+    transition: all .3s;      /* Aplica una transición a todas las propiedades que cambien. */ 
+    position: absolute;   /* Posiciona el elemento de forma absoluta respecto a su
+    contenedor más cercano con posición relativa. */    
+    right: 32px;  /* Coloca el elemento a 32 píxeles desde el lado derecho del contenedor.
+    */    
+    top: 18px;   /* Coloca el elemento a 18 píxeles desde la parte superior del contenedor.
+    */
+    
+}
+
+.header-menu-toggle:hover,
+.header-menu-toggle:focus {     /*Llamamos a las clases asignadas*/ 
+    color: #ffffff;   /*Damos color al menu*/
+}
+
+.header-menu-toggle span {     /*Llamamos a las clases asignadas*/ 
+    display: block;     /*Difinimos el elemento como un bloque */ 
+    width: 24px;       /* Establece el ancho */
+    height: 2px;  /* establece la altura*/
+    margin-top: -1px;
+    background-color: #ffffff;   /* aplicamos un fondo*/
+    transition: all .5s;    /*Configuramos la transicion */ 
+    font: 0/0 a;
+    text-shadow: none;   /*Sin sombras de texto*/ 
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    right: auto;
+    bottom: auto;
+}
+
+.header-menu-toggle span::before,    /*Llamamos a las clases asignadas*/ 
+.header-menu-toggle span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    transition: all .5s;
+}
+
+.header-menu-toggle span::before {   /*Llamamos a las clases asignadas*/ 
+    top: -9px;
+}
+
+.header-menu-toggle span::after {   /*Llamamos a las clases asignadas*/ 
+    bottom: -9px;
+}
+
+.header-menu-toggle.is-clicked span {
+    background-color: rgba(255, 255, 255, 0);
+    transition: all .1s;
+}
+
+.header-menu-toggle.is-clicked span::before,    /*Llamamos a las clases asignadas*/ 
+.header-menu-toggle.is-clicked span::after {
+    background-color: white;
+}
+
+.header-menu-toggle.is-clicked span::before {    /*Llamamos a las clases asignadas*/ 
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.header-menu-toggle.is-clicked span::after {    /*Llamamos a las clases asignadas*/ 
+    bottom: 0;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+/*-----------------------------------------------------------------
+* responsive
+* header
+--------------------------------------------------------------------*/
+@media screen and (max-width:1200px) {
+    .header-main-nav {
+        font-size: 12px;
+    }
+
+    .header-main-nav li {
+        margin: 0 1.4rem;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .s-header {
+        text-align: right;
+    }
+
+    .header-nav-wrap {  /*Llamamos a las clases asignadas*/ 
+        margin-right: 36px;
+    }
+
+    .header-nav-wrap .header-social { /*Llamamos a las clases asignadas*/ 
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .s-header {                               /*Llamamos a las clases asignadas*/ 
+        background-color: #050505;
+        position: fixed;
+        top: 0;
+    }
+
+    .header-logo img {  /*Llamamos a las clases asignadas*/ 
+        width: 128px;
+        height: 30px;
+    }
+
+    .header-nav-wrap {      /*Llamamos a las clases asignadas*/
+        display: none;
+        text-align: left;
+        height: auto;
+        width: 100%;
+        background-color: #050505;
+        padding: 120px 44px 64px;
+
+    }
+
+    .header-nav-wrap .header-main-nav {    /*Llamamos a las clases asignadas*/
+        display: block;
+        padding-left: 0;
+        height: auto;
+        margin: 0 0 4rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li {    /*Llamamos a las clases asignadas*/
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li a {     /*Llamamos a las clases asignadas*/
+        padding: 18px 0;
+        line-height: 20px;
+    }
+
+    .header-nav-wrap .header-social {    /*Llamamos a las clases asignadas*/
+        display: block;
+        position: static;
+
+    }
+
+    .header-nav-wrap .header-social li {    /*Llamamos a las clases asignadas*/
+        font-size: 1.8rem;
+        margin-right: 1.6rem;
+    }
+  
+    .header-nav-wrap .header-social li a {   /*Llamamos a las clases asignadas*/
+        line-height: 36px;
+    }
+
+    .header-menu-toggle {   /*Llamamos a las clases asignadas*/
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:600px) {    
+    .header-logo {                                  /*Llamamos a las clases asignadas*/
+        left: 35px;
+    }
+
+}
+
+/*--------------------------------------------------------------------------------------------
+  * hacer que el menu sea visible en una pantalla larga
+  ---------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:801px) {
+    .header-nav-wrap {
+        display: block !important;
+    }
+}
+
+/* ===================================================================
+ * # intro 
+ *
+ * ------------------------------------------------------------------- */
+.s-intro {  /*Llamamos a las clases asignadas*/
+    width: 100%;
+    height: 100vh;
+    min-height: 792px;
+    background-color: #050505;
+}
+
+.intro-content {   /*Llamamos a las clases asignadas*/
+    height: 100%;
+    max-width: 1140px;
+    padding-top: 20vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.intro-pic {   /*Llamamos a las clases asignadas*/
+    background-color: #02182c;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(../img/hero-pic.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.intro-pic::before {  /*Llamamos a las clases asignadas*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .2;
+}
+
+.intro-grid {    /*Llamamos a las clases asignadas*/
+    background-image: url(../img/pattern-dot-grid.svg);
+    background-size: 24px 24px;
+    opacity: .15;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left: 30%;
+}
+
+.intro-text {   /*Llamamos a las clases asignadas*/
+    -webkit-transform: translate3d(0, -3.6rem, 0);
+    transform: translate3d(0, -3.6rem, 0);
+    position: static;
+    z-index: 1;
+}
+
+.intro-text h3 {    /*Llamamos a las clases asignadas*/
+    font-family: "Roboto", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.333;
+    color: #cf1767;
+    margin-top: 0;
+}
+
+.intro-text h1 {   /*Llamamos a las clases asignadas*/
+    font-size: 7.8rem;
+    font-weight: 500;
+    line-height: 1.179;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.intro-scroll {    /*Llamamos a las clases asignadas*/
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 8rem;
+    left: 24px;
+    z-index: 1;
+}
+
+.intro-scroll a {   /*Llamamos a las clases asignadas*/
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding-right: 8.8rem;
+}
+
+.intro-scroll a::after {     /*Llamamos a las clases asignadas*/
+    content: "";
+    position: absolute;   /* colocamos en posicion absoluta*/
+    top: 50%;
+    right: 0;
+    height: 1px;
+    width: 72px;
+    background-color: #cf1767;  /* damos un color*/
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * intro
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1400px) {
+    .intro-text h3 {     /*Llamamos a las clases asignadas*/
+        font-size: 2.2rem;
+    }
+
+    .intro-text h1 {          /*Llamamos a las clases asignadas*/
+        font-size: 7.2rem;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .intro-content {                          /*Llamamos a las clases asignadas*/
+        max-width: 1000px;
+    }
+
+    .intro-text h3 {  /*Llamamos a las clases asignadas*/
+        font-size: 2rem;
+    }
+
+    .intro-text h1 { /*Llamamos a las clases asignadas*/
+        font-size: 7rem;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .s-intro {   /*Llamamos a las clases asignadas*/
+        max-height: 800px;
+    }
+
+    .intro-text h1 {  /*Llamamos a las clases asignadas*/
+        font-size: 6.2rem;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .intro-text h1 {   /*Llamamos a las clases asignadas*/
+        font-size: 6rem;
+    }
+
+    .intro-text br {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .intro-content {
+        width: 88%;
+        padding-top: 8rem;
+    }
+
+    .intro-pic {
+        top: 12%;
+        left: 40%;
+    }
+
+    .intro-pic::before {
+        opacity: .4;
+    }
+
+    .intro-grid {
+        top: 20%;
+        opacity: .1;
+    }
+
+    .intro-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text h1 {
+        font-size: 5.6rem;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .intro-text h1 {
+        font-size: 5rem;
+    }
+
+    .intro-pic {
+        left: 30%;
+    }
+
+    .intro-grid {
+        left: 15%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .s-intro {
+        max-height: none;
+    }
+
+    .intro-content {
+        width: auto;
+    }
+
+    .intro-pic {
+        left: 20%;
+    }
+
+    .intro-grid {
+        left: 10%;
+    }
+
+    .intro-text {
+        -webkit-transform: translate3d(0, -4.8rem, 0);
+        transform: translate3d(0, -4.8rem, 0);
+    }
+
+    .intro-text h1 {
+        font-size: 4.8rem;
+    }
+
+    .intro-scroll {
+        font-size: 1.1rem;
+        left: 30px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .s-intro {
+        min-height: 656px;
+    }
+
+    .intro-text h1 {
+        font-size: 4.5rem;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    .intro-text h1 {
+        font-size: 4.2rem;
+    }
+
+}
+
+/* ===================================================================
+ * # about
+ *
+ * ------------------------------------------------------------------- */
+.s-about {
+    padding-top: 19.2rem;
+    padding-bottom: 16.8rem;
+    background-color: #ffffff;
+}
+
+.s-about .row {
+    max-width: 1140px;
+}
+
+.s-about>[class*="about-"] {
+    margin-bottom: 15.2rem;
+}
+
+.s-about>[class*="about-"]:last-child {
+    margin-bottom: 0;
+}
+
+.about-me__text {
+    -webkit-columns: 2 360px;
+    -moz-columns: 2 360px;
+    columns: 2 360px;
+    column-gap: 64px;
+}
+
+.about-me__buttons {
+    margin-top: 4.8rem;
+}
+
+.about-me__buttons .column:first-child {
+    padding-right: 32px;
+}
+
+.about-me__buttons .column:last-child {
+    padding-left: 32px;
+}
+
+/* -------------------------------------------------------------------
+   * ## timeline
+   * ------------------------------------------------------------------- */
+.about-experience__timeline {
+    margin-top: 1.6rem;
+}
+
+.about-experience__timeline .column:first-child {
+    padding-right: 40px;
+}
+
+.about-experience__timeline .column:last-child {
+    padding-left: 40px;
+}
+
+.timeline {
+    padding-top: 4.8rem;
+    position: relative;   /* posicion relativa*/
+}
+
+.timeline::before {   /*Llamamos a las clases asignadas*/
+    content: "";
+    display: block;   /*Difinimos el elemento como un bloque y una posicion*/
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.timeline::after {   /*Llamamos a las clases asignadas*/
+    content: "";
+    display: block; /*Difinimos el elemento como un bloque y una posicion*/
+    width: 5.6rem;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    left: 1px;
+    top: 0;
+}
+
+.timeline__icon-wrap {   /*Llamamos a las clases asignadas*/
+    display: block;  /*Difinimos el elemento como un bloque y una posicion*/
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -2.2rem;
+    left: 5.6rem;
+}
+
+.timeline__icon {  /*Llamamos a las clases asignadas*/
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.timeline__icon--work {  /*Llamamos a las clases asignadas*/
+    background-image: url(../icons/icon-briefcase.svg);
+}
+
+.timeline__icon--education {  /*Llamamos a las clases asignadas*/
+    background-image: url(../img/icons/icon-education.svg);
+}
+
+.timeline__block {  /*Llamamos a las clases asignadas*/
+    position: relative;
+    padding-left: 5.6rem;
+    padding-bottom: .8rem;
+    margin-top: 2.8rem;
+    min-height: 35.6rem;
+}
+
+.timeline .timeline__block:last-child {   /*Llamamos a las clases asignadas*/
+    padding-bottom: 0;
+}
+
+.timeline__bullet {   /*Llamamos a las clases asignadas*/
+    content: "";
+    display: block;   /*Difinimos el elemento como un bloque y una posicion*/
+    width: 3px;
+    height: 4.8rem;
+    background-color: #000000;
+    position: absolute;
+    left: -1px;
+    top: 8px;
+}
+
+.timeline__header {  /*Llamamos a las clases asignadas*/
+    margin-bottom: 3.2rem;
+}
+
+.timeline__header .timeline__timeframe,
+.timeline__header h5 {     /*Llamamos a las clases asignadas*/
+    font-family: "Roboto", sans-serif;
+}
+
+.timeline__header .timeline__timeframe {  /*Llamamos a las clases asignadas*/
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.714;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-bottom: .8rem;
+    color: #000000;
+}
+
+.timeline__header h3 {  /*Llamamos a las clases asignadas*/
+    margin-bottom: 0;
+}
+
+.timeline__header h5 {  /*Llamamos a las clases asignadas*/
+    font-size: 2.1rem;
+    font-weight: 400;
+    line-height: 1.333;
+    margin-top: 0;
+}
+
+/* ------------------------------------------------------------------- 
+   * responsive:
+   * about
+   * ------------------------------------------------------------------- */
+@media screen and (max-width:1200px) {
+    .s-about {
+        padding-top: 17.2rem;
+        padding-bottom: 15.6rem;
+    }
+
+    .about-experience__timeline .column:first-child {   /*Llamamos a las clases asignadas*/
+        padding-right: 30px;
+    }
+
+    .about-experience__timeline .column::last-child {   /*Llamamos a las clases asignadas*/
+        padding-left: 30px;
+    }
+
+    .timeline::after {   /*Llamamos a las clases asignadas*/
+        width: 4.4rem; 
+    }
+
+    .timeline__icon-wrap {   /*Llamamos a las clases asignadas*/
+        left: 4.4rem;
+    }
+
+    .timeline__block {   /*Llamamos a las clases asignadas*/
+        padding-left: 4.4rem;
+    }
+
+    .timeline__header h5 {   /*Llamamos a las clases asignadas*/
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .about-me__text {
+        column-gap: 40px;
+    }
+
+    .about-me__buttons .column:first-child {    /*Llamamos a las clases asignadas*/
+        padding-right: 20px;
+    }
+
+    .about-me__buttons .column:last-child {   /*Llamamos a las clases asignadas*/
+        padding-left: 20px;
+    }
+
+    .about-experience__timeline .column:first-child {   /*Llamamos a las clases asignadas*/
+        padding-right: 16px;
+    }
+
+    .about-experience__timeline .column:last-child {   /*Llamamos a las clases asignadas*/
+        padding-left: 16px;  
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .s-about .row {
+        max-width: 700px;
+    }
+
+    .about-me__buttons .column:first-child {   /*Llamamos a las clases asignadas*/
+        padding-right: 16px;
+    }
+
+    .about-me__buttons .column:last-child {   /*Llamamos a las clases asignadas*/
+        padding-left: 16px;
+    }
+
+    .about-experience__timeline .column {   /*Llamamos a las clases asignadas*/
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-experience__timeline .column:first-child {  /*Llamamos a las clases asignadas*/
+        margin-bottom: 9.6rem;
+    }
+
+    .timeline::after {   /*Llamamos a las clases asignadas*/
+        width: 5.6rem;
+    }
+
+    .timeline__icon-wrap {   /*Llamamos a las clases asignadas*/
+        left: 5.6rem;
+    }
+
+    .timeline__block {    /*Llamamos a las clases asignadas*/
+        min-height: 0;  
+        padding-left: 5.6rem;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .s-about {
+        padding-top: 16rem;
+    }
+
+    .s-about .row {   /*Llamamos a las clases asignadas*/
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .about-me__buttons .column:first-child,
+    .about-experience__timeline .column:first-child {   /*Llamamos a las clases asignadas*/
+        padding-right: 10px;
+    }
+
+    .about-me__buttons .column:last-child,
+    .about-experience__timeline .column:last-child {   /*Llamamos a las clases asignadas*/
+        padding-left: 10px;
+    }
+
+    .timeline::after {   /*Llamamos a las clases asignadas*/
+        width: 4.4rem;
+    }
+
+    .timeline__icon-wrap {   /*Llamamos a las clases asignadas*/
+        left: 4.4rem;
+    }
+
+    .timeline__block {   /*Llamamos a las clases asignadas*/
+        padding-left: 4.4rem;
+    }
+
+    .timeline__header h5 {   /*Llamamos a las clases asignadas*/
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .s-about>[class*="about-"] {   /*Llamamos a las clases asignadas*/
+        margin-bottom: 14rem;
+    }
+
+    .about-me__buttons .column:first-child,
+    .about-experience__timeline .column:first-child {   /*Llamamos a las clases asignadas*/
+        padding-right: 0;
+    }
+
+    .about-me__buttons .column:last-child,
+    .about-experience__timeline .column:last-child {   /*Llamamos a las clases asignadas*/
+        padding-left: 0;
+    }
+
+    .timeline::after {   /*Llamamos a las clases asignadas*/
+        width: 2.8rem;
+    }
+
+    .timeline__icon-wrap {   /*Llamamos a las clases asignadas*/
+        left: 2.8rem;
+    }
+ 
+    .timeline__block {   /*Llamamos a las clases asignadas*/
+        padding-left: 2.8rem;
+    }
+
 }
